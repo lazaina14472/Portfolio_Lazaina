@@ -1,0 +1,92 @@
+
+/* =========================================================
+   CV — PROFIL / COMPETENCES / ETC.
+========================================================= */
+.profil-text{
+  color: var(--text-soft);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.skill-group{
+  margin-bottom: 20px;
+}
+.skill-group-title{
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-soft);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.tag-wrap{ display:flex; flex-wrap:wrap; gap: 8px; }
+.tag{
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  background: var(--tag-bg);
+  color: var(--text);
+  border: 1px solid var(--card-border);
+  padding: 6px 12px;
+  border-radius: 8px;
+  display:flex;
+  align-items:center;
+  gap: 6px;
+}
+.tag i{ color: var(--accent); }
+.tag.accent{
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+.tag.accent i{ color: #fff; }
+
+.note-box{
+  margin-top: 6px;
+  background: var(--accent-soft);
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-size: 0.85rem;
+  color: var(--text-soft);
+  display:flex;
+  gap: 10px;
+  align-items:flex-start;
+}
+.note-box i{ color: var(--accent); margin-top: 2px; }
+
+.cv-grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.formation-item, .contact-item{
+  display:flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.formation-item i, .contact-item i{
+  color: var(--accent);
+  font-size: 1rem;
+  margin-top: 2px;
+  flex-shrink:0;
+}
+.formation-item b, .contact-item b{
+  display:block;
+  font-size: 0.92rem;
+  font-weight:700;
+}
+.formation-item span, .contact-item span{
+  font-size: 0.85rem;
+  color: var(--text-soft);
+}
+
+.lang-row{
+  display:flex; justify-content:space-between;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  padding-bottom:10px;
+  border-bottom: 1px solid var(--card-border);
+}
+.lang-row b{ font-weight:700; }
+.lang-row span{ color: var(--text-soft); font-size: 0.82rem; }

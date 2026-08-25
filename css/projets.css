@@ -1,0 +1,127 @@
+
+
+/* =========================================================
+   PROJETS
+========================================================= */
+.projects-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+.project-card{
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease;
+  display:flex;
+  flex-direction:column;
+}
+.project-card:hover{ transform: translateY(-4px); }
+.project-card .p-title{
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  display:flex; align-items:center; gap:8px;
+}
+.project-card .p-title i{ color: var(--accent); }
+.project-card .p-stack{
+  font-family: var(--font-mono);
+  color: var(--accent);
+  font-size: 0.78rem;
+  margin-bottom: 14px;
+}
+.project-card ul{
+  margin:0 0 16px 0; padding:0; list-style:none;
+}
+.project-card ul li{
+  font-size: 0.87rem;
+  color: var(--text-soft);
+  padding-left: 16px;
+  position: relative;
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+.project-card ul li::before{
+  content:"›";
+  position:absolute; left:0;
+  color: var(--accent);
+  font-weight:bold;
+}
+
+/* ---- Mini galerie photo integree a la card ---- */
+.mini-gallery{ position: relative; margin-bottom: 16px; }
+.mini-track{
+  display:flex;
+  gap: 8px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 2px 2px 8px 2px;
+  scrollbar-width: thin;
+}
+.mini-track::-webkit-scrollbar{ height: 5px; }
+.mini-track::-webkit-scrollbar-thumb{ background: var(--card-border); border-radius: 6px; }
+
+.photo-slot{
+  scroll-snap-align: start;
+  flex: 0 0 120px;
+  height: 90px;
+  border-radius: 10px;
+  border: 2px dashed var(--card-border);
+  background: var(--bg-alt);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap: 4px;
+  color: var(--text-soft);
+  overflow:hidden;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+.photo-slot:hover{ transform: scale(1.04); }
+.photo-slot img{
+  width:100%; height:100%;
+  object-fit: cover;
+}
+.photo-slot i{ font-size: 1.2rem; color: var(--accent); }
+.photo-slot span{ font-size: 0.68rem; }
+
+.mg-btn{
+  position:absolute;
+  top:50%;
+  transform: translateY(-50%);
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  background: var(--accent);
+  color:#fff;
+  border:none;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow: var(--shadow);
+  z-index:5;
+  font-size: 0.75rem;
+}
+.mg-prev{ left: -8px; }
+.mg-next{ right: -8px; }
+
+.code-btn{
+  margin-top: auto;
+  align-self: flex-start;
+  display:flex;
+  align-items:center;
+  gap: 8px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 9px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+.code-btn i{ font-size: 0.9rem; }
+.code-btn:hover{ opacity: 0.9; }
